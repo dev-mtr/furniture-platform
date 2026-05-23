@@ -43,3 +43,13 @@ Thumbs.db
 
 # ── Deployment ────────────────────────────────────────────────
 .vercel
+
+# ── Terraform ─────────────────────────────────────────────────
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/terraform.tfstate.*.backup
+terraform/terraform.tfvars
+
+# Claude
+.claude/
