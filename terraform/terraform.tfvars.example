@@ -1,0 +1,12 @@
+# Copy this file to terraform.tfvars and fill in your values.
+# terraform.tfvars is gitignored — never commit it.
+#
+# R2 credentials are NOT terraform variables — export them as env vars before running:
+#   export AWS_ACCESS_KEY_ID="your-r2-access-key-id"
+#   export AWS_SECRET_ACCESS_KEY="your-r2-secret-key"
+
+supabase_access_token = "sbp_xxxxxxxxxxxxxxxxxxxx"
+supabase_org_id       = "your-org-id-here"
+project_name          = "furniture-platform-dev"
+database_password     = "a-strong-password-here"
+region                = "eu-central-1"
