@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 1.0"
+  required_version = ">= 1.6"
 
   required_providers {
     supabase = {
@@ -9,14 +9,17 @@ terraform {
   }
 
   backend "s3" {
-    bucket                      = "nenovi-tf-state"
-    key                         = "furniture-platform/terraform.tfstate"
-    region                      = "auto"
-    endpoint                    = "https://806237f163cf060c86ca21293ad0d4da.r2.cloudflarestorage.com"
-    skip_credentials_validation = true
-    skip_metadata_api_check     = true
-    skip_region_validation      = true
-    force_path_style            = true
+    bucket   = "nenovi-tf-state"
+    key      = "furniture-platform/terraform.tfstate"
+    region   = "auto"
+    endpoints = {
+      s3 = "https://806237f163cf060c86ca21293ad0d4da.r2.cloudflarestorage.com"
+    }
+    skip_credentials_validation  = true
+    skip_metadata_api_check      = true
+    skip_region_validation       = true
+    skip_requesting_account_id   = true
+    use_path_style               = true
   }
 }
 
